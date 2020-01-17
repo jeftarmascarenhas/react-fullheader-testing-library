@@ -21,7 +21,7 @@ storiesOf('FullHeader', module)
       title="TDD on React"
       subtitle="Using Testing Ribrary React"
       bgColor="#3299BB"
-      textColor="#333"
+      textColor="#fff"
     />
   ))
   .add('with title, subtitle, bgImg', () => (
