@@ -25198,12 +25198,10 @@ object-assign
       function showError(_ref2) {
         var title = _ref2.title,
           description = _ref2.description
-        _addons.default
-          .getChannel()
-          .emit(_coreEvents.default.STORY_ERRORED, {
-            title: title,
-            description: description,
-          }),
+        _addons.default.getChannel().emit(_coreEvents.default.STORY_ERRORED, {
+          title: title,
+          description: description,
+        }),
           showErrorDisplay({ message: title, stack: description })
       }
       function showException(exception) {

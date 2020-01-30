@@ -42105,14 +42105,12 @@ object-assign
                         var c = r.length + 1,
                           f = { type: 'text', value: a + '\n' }
                         if (0 === l) {
-                          var p = n
-                            .slice(o + 1, i)
-                            .concat(
-                              s({
-                                children: [f],
-                                className: e.properties.className,
-                              }),
-                            )
+                          var p = n.slice(o + 1, i).concat(
+                            s({
+                              children: [f],
+                              className: e.properties.className,
+                            }),
+                          )
                           r.push(
                             s({ children: p, lineNumber: c, lineProps: t }),
                           )
