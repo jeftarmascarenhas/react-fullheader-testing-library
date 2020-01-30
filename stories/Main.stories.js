@@ -3,8 +3,6 @@ import { storiesOf } from '@storybook/react'
 import { withKnobs, text, color } from '@storybook/addon-knobs'
 
 import FullHeader from '../src/Main'
-import video from '../src/assets/video/demo.mp4'
-
 const stories = storiesOf('FullHeader', module).addDecorator(withKnobs)
 
 stories
@@ -41,10 +39,14 @@ stories
       )}
     />
   ))
-  .add('with title, subtitle, video', () => (
+  .add('with title, subtitle, video, textColor', () => (
     <FullHeader
       title={text('title', 'TDD on React')}
       subtitle={text('subtitle', 'Using Testing Ribrary React')}
-      video={text('video', video)}
+      textColor={color('textColor', '#fff')}
+      video={text(
+        'video',
+        'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+      )}
     />
   ))
