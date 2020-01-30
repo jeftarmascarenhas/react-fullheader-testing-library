@@ -4,3 +4,5 @@ coverage
 public
 .docz
 package.json
+storybook-static
+.out/
