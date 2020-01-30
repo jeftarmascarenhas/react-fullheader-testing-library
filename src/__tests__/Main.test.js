@@ -3,8 +3,6 @@ import { render, cleanup } from '@testing-library/react'
 
 import FullHeader from '../Main'
 
-import videoSrc from '../assets/video/demo.mp4'
-
 const renderIgnoringUnstableFlushDiscreteUpdates = component => {
   // tslint:disable: no-console
   const originalError = console.error
@@ -58,7 +56,12 @@ describe('<FullHeader />', () => {
   })
   it('should have video when video tag', () => {
     const { queryByTestId } = renderIgnoringUnstableFlushDiscreteUpdates(
-      <FullHeader video={videoSrc} autoPlay muted loop />,
+      <FullHeader
+        video="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+        autoPlay
+        muted
+        loop
+      />,
     )
     const video = queryByTestId('video')
     expect(video).toBeTruthy()
