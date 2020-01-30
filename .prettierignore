@@ -6,3 +6,5 @@ public
 package.json
 storybook-static
 .out/
+.out
+out
