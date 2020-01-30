@@ -8,7 +8,7 @@ import video from '../src/assets/video/demo.mp4'
 const stories = storiesOf('FullHeader', module).addDecorator(withKnobs)
 
 stories
-  .add('with title', () => <FullHeader title="TDD in React" />)
+  .add('with title', () => <FullHeader title={text('title', 'TDD on React')} />)
   .add('with title and subtitle', () => (
     <FullHeader
       title={text('title', 'TDD on React')}
